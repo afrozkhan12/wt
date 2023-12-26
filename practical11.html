@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script>
+    function validateForm() {
+      // Get form elements
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var password = document.forms["myForm"]["password"].value;
+      var gender = document.forms["myForm"]["gender"].value;
+      var interests = document.forms["myForm"]["interests[]"];
+      var country = document.forms["myForm"]["country"].value;
+
+      // Validation for name field
+      if (name === "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      // Validation for email field
+      if (email === "") {
+        alert("Email must be filled out");
+        return false;
+      } else {
+        // Simple email format validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert("Invalid email address");
+          return false;
+        }
+      }
+
+      // Validation for password field
+      if (password === "") {
+        alert("Password must be filled out");
+        return false;
+      }
+
+      // Validation for gender selection
+      if (gender === "") {
+        alert("Please select a gender");
+        return false;
+      }
+
+      // Validation for interests checkbox
+      var checkedInterests = false;
+      for (var i = 0; i < interests.length; i++) {
+        if (interests[i].checked) {
+          checkedInterests = true;
+          break;
+        }
+      }
+      if (!checkedInterests) {
+        alert("Please select at least one interest");
+        return false;
+      }
+
+      // Validation for country selection
+      if (country === "") {
+        alert("Please select a country");
+        return false;
+      }
+
+      // If all validations pass
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+  <style>
+    body{ 
+
+      text-align: center;
+
+      background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%); 
+
+    }
+  </style>
+</head>
+<body>
+    <h1>FORM</h1>
+  <form name="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label>Interests:</label>
+    <input type="checkbox" id="interest1" name="interests[]" value="interest1">
+    <label for="interest1">Interest 1</label>
+    <input type="checkbox" id="interest2" name="interests[]" value="interest2">
+    <label for="interest2">Interest 2</label><br><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">Select</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Canada">Canada</option>
+      <option value="india">india</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

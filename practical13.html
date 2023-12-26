@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id>1</id>
+        <name>John Doe</name>
+        <position>Software Engineer</position>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Jane Smith</name>
+        <position>UI/UX Designer</position>
+    </employee>
+</employees>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+    <head>
+      <style>
+        table {
+          border-collapse: collapse;
+          width: 50%;
+          margin: 20px;
+        }
+        th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Employee List</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Position</th>
+        </tr>
+        <xsl:for-each select="employees/employee">
+          <tr>
+            <td><xsl:value-of select="id"/></td>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="position"/></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </body>
+  </html>
+</xsl:template>
+
+</xsl:stylesheet>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            height: 100vh; /* 100% of the viewport height */
+        }
+
+        #horizontal-frame {
+            grid-column: span 2;
+            height: 50%; /* Half of the viewport height */
+            border: 1px solid #000;
+        }
+
+        #vertical-frame-left,
+        #vertical-frame-right {
+            height: 100%;
+            border: 1px solid #000;
+        }
+
+        #content {
+            grid-column: 2;
+            height: 50%; /* Half of the viewport height */
+            overflow: auto; /* Add scrollbars if content exceeds the frame */
+            border: 1px solid #000;
+        }
+    </style>
+    <title>Frame Layout</title>
+</head>
+<body>
+    <div id="horizontal-frame">wfsf Lorem ipsum dolor sit.</div>
+    <div id="vertical-frame-left">dfsfs Lorem ipsum dolor sit amet.</div>
+    <div id="vertical-frame-right">sfsdf Lorem ipsum dolor sit.</div>
+    <div id="content">
+        sfsf Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat?
+        <!-- Content goes here -->
+    </div>
+</body>
+</html>

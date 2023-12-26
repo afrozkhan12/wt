@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="xs:string"/>
+              <xs:element name="author" type="xs:string"/>
+              <xs:element name="publication_year" type="xs:integer"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+<?xml version="1.0"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="books.xsd">
+  <book>
+    <title>Introduction to XML</title>
+    <author>John Doe</author>
+    <publication_year>2022</publication_year>
+  </book>
+  <book>
+    <title>Web Development Basics</title>
+    <author>Jane Smith</author>
+    <publication_year>2021</publication_year>
+  </book>
+</library>

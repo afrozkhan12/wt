@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical 10</title>
+    <style>
+        body{
+          background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+      text-align: center;
+     
+        }
+        h1{
+            
+            font-style: italic;
+            color: brown;
+                }
+                
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Popup Boxes</title>
+</head>
+<body>
+
+<h1>JavaScript Popup Boxes</h1>
+
+<button onclick="showAlert()">Show Alert</button>
+<button onclick="showConfirm()">Show Confirm Box</button>
+<button onclick="showPrompt()">Show Prompt Box</button>
+
+<script>
+  function showAlert() {
+    alert("This is an alert box!");
+  }
+
+  function showConfirm() {
+    const result = confirm("Do you want to proceed?");
+    if (result) {
+      alert("You clicked OK!");
+    } else {
+      alert("You clicked Cancel!");
+    }
+  }
+
+  function showPrompt() {
+    const name = prompt("Please enter your name:", "John Doe");
+    if (name === null || name === "") {
+      alert("You canceled or did not enter a name.");
+    } else {
+      alert("Hello, " + name + "!");
+    }
+  }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

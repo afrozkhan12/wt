@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the home page of our small website. Explore the other pages using the navigation links below:</p>
+    <ul>
+        <li><a href="page1.html">Page 1</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Page 1</h1>
+    <p>This is Page 1 of our small website. Navigate to other pages using the links below:</p>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+    </ul>
+    <p>Some DHTML Elements:</p>
+    <div id="dynamicContent" style="background-color: #f0f0f0; padding: 10px;">Dynamic Content Goes Here</div>
+    <script>
+        // Example of DHTML (changing content dynamically)
+        document.getElementById('dynamicContent').innerHTML = 'Updated Dynamic Content';
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Page 2</h1>
+    <p>This is Page 2 of our small website. Navigate to other pages using the links below:</p>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Page 1</a></li>
+    </ul>
+    <p>More HTML Elements:</p>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

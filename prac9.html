@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practical 9 </title>
+  <style>
+    body{
+      background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+      text-align: center;
+    }
+    img{
+      object-fit: cover;
+    }
+  </style>
+  
+</head>
+<body>
+  <h2 style="color: rgb(105, 85, 66);font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">javascript html events  </h2>
+  <p>here we are using onlick mouseover mouseout</p>
+ <p style="color: rgb(52, 52, 133);font-family: cambria;font-size: xx-large; color: azure;" id="id1" onclick="myfunction()">Hello Im event onclick </p>
+ <img id="id2" onmouseover="setnewimage()"onmouseout="setoldimage()"src="practical 9 image.webp" width="790px" height="400px">
+ <script>
+         function myfunction(){
+          document.getElementById("id1").innerHTML ="i was clicked";
+         }
+         function setnewimage(){
+                   document.getElementById("id2").src ="503348-books-business.jpg";
+         }
+             function setoldimage(){
+              document.getElementById("id2").src="practical 9 image.webp";
+         }
+
+             
+
+       
+ </script>
+ </body>
+ </html>
+
